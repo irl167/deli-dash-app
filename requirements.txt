@@ -1,0 +1,16 @@
+numpy
+pandas
+xarray
+netcdf4
+matplotlib
+scikit-learn
+scipy
+statsmodels
+cmocean
+dash
+dash_auth
+plotly
+cftime
+gunicorn
+django
+python-dateutil
