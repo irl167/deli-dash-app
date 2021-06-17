@@ -4,7 +4,7 @@ import dash_core_components as dcc
 from dash.dependencies import Input, Output, State
 import dash_auth
 
-import plotly.graph_objs as go
+import plotly.graph_objs
 import plotly.express as px
 import pandas as pd
 import numpy as np
@@ -340,7 +340,6 @@ def callback_fig_prob_years(beach, years):
     ini_year = years[0]
     end_year = years[1]
     histcolor = ['blue', 'green', 'yellow', 'orange', 'red', 'purple', 'black']
-    data_prob = data.where(data['beach']==beach).dropna(how='all', axis=0).copy()
     data_prob = data.where((data['Year']>=ini_year) & (data['Year']<=end_year))\
                 .dropna(how='all', axis=0).copy()
     data_prob = data_prob.groupby([pd.Grouper(freq='M'), 
